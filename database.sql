@@ -1,8 +1,8 @@
-CREATE DATABASE IF NOT EXISTS gradetrack;
+CREATE DATABASE gradetrack;
 
 USE gradetrack;
 
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
@@ -12,14 +12,14 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE IF NOT EXISTS courses (
+CREATE TABLE courses (
     course_id INT AUTO_INCREMENT PRIMARY KEY,
     course_name VARCHAR(100) NOT NULL,
     description TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE IF NOT EXISTS attendance (
+CREATE TABLE attendance (
     attendance_id INT AUTO_INCREMENT PRIMARY KEY,
     course_id INT NOT NULL,
     student_id INT NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS attendance (
     FOREIGN KEY (student_id) REFERENCES users(user_id)
 );
 
-CREATE TABLE IF NOT EXISTS grades (
+CREATE TABLE grades (
     grade_id INT AUTO_INCREMENT PRIMARY KEY,
     student_id INT NOT NULL,
     course_id INT NOT NULL,
