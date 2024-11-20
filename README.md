@@ -1,6 +1,6 @@
 # GradeTrack
 
-**GradeTrack** is a web-based application designed for managing student grades and attendance. It provides separate dashboards for students and teachers, making it easier to track academic progress, submit grades, and manage classes.
+**GradeTrack** is a web-based application designed for managing student grades and attendance. It provides separate dashboards for students and teachers, making it easier to track academic progress, submit grades, and attendance.
 
 ---
 
